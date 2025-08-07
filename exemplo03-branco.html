@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Banco</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configurar Tailwind para o modo escuro via classe
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        roxo: {
+                            DEFAULT: '#7e22ce',
+                            escuro: '#581c87'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="dark:bg-gray-900 bg-white text-gray-900 dark:text-white min-h-screen flex flex-col items-center justify-center space-y-6 p-4">
+
+    <h1 class="text-3xl font-bold text-roxo dark:text-roxo-escuro">Bem-vindo ao seu banco</h1>
+
+    <div class="flex gap-4">
+        <button onclick="sacar()"
+            class="bg-roxo text-white px-4 py-2 rounded hover:bg-roxo-escuro transition">Sacar</button>
+        <button onclick="apresentarSaldo()"
+            class="bg-roxo text-white px-4 py-2 rounded hover:bg-roxo-escuro transition">Apresentar Saldo</button>
+        <button onclick="depositar()"
+            class="bg-roxo text-white px-4 py-2 rounded hover:bg-roxo-escuro transition">Depositar</button>
+    </div>
+
+    <script src="js/exemplo03-banco.js"></script>
+</body>
+
+</html>
